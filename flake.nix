@@ -18,7 +18,7 @@
                     home-manager = {
                         useGlobalPkgs = true;
                         useUserPackages = true;
-                        users.w-devendd = import ./home/w-devendd.nix;
+                        users."w-devendd" = import ./home/w-devendd.nix;
                         backupFileExtension = "bak";
                     };
                 }
