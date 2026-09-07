@@ -10,9 +10,11 @@
     };
 
     imports = [
-        ./hardware-configuration.nix
+        ./hardware.nix
         ./boot.nix
         ./networking.nix
         ./users.nix
     ];
+
+    system.stateVers ion = "26.05";
 }
