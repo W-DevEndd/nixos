@@ -16,5 +16,5 @@
         ./users.nix
     ];
 
-    system.stateVers ion = "26.05";
+    system.stateVersion = "26.05";
 }
