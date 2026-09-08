@@ -6,10 +6,12 @@
 {
     time = {
         timeZone = "Asia/Ho_Chi_Minh";
+        i18n.defaultLocale = "en_US.UTF-8";
         hardwareClockInLocalTime = true;
     };
 
     imports = [
+        ../../common/pkgs.nix
         ./hardware.nix
         ./boot.nix
         ./networking.nix
