@@ -16,7 +16,7 @@
     };
 
     imports = [
-        ../../common/pkgs.nix
+        ../../common/packages.nix
         ./hardware.nix
         ./perfomance.nix
         ./boot.nix
