@@ -1,4 +1,6 @@
-{ config, home-manager, ... }:
+{ config, ... }:
 {
-    git = import ./programs/git.nix;
+    imports = [
+        ./programs/git.nix
+    ];
 }
