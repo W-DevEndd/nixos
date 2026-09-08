@@ -4,6 +4,8 @@
 
 { config, lib, pkgs, ... }:
 {
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
     i18n.defaultLocale = "en_US.UTF-8";
     time = {
         timeZone = "Asia/Ho_Chi_Minh";

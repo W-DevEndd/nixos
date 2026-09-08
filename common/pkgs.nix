@@ -6,5 +6,6 @@
         wget
         curl
         htop
+        fastfetch
     ];
 }
