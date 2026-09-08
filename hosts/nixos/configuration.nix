@@ -18,6 +18,7 @@
     imports = [
         ../../common/pkgs.nix
         ./hardware.nix
+        ./perfomance.nix
         ./boot.nix
         ./networking.nix
         ./users.nix
