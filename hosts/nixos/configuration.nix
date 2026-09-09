@@ -9,19 +9,14 @@
     };
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    i18n.defaultLocale = "en_US.UTF-8";
-    time = {
-        timeZone = "Asia/Ho_Chi_Minh";
-        hardwareClockInLocalTime = true;
-    };
-
     imports = [
         ../../common/packages.nix
-        ./hardware.nix
-        ./perfomance.nix
         ./boot.nix
+        ./hardware.nix
         ./networking.nix
+        ./perfomance.nix
         ./users.nix
+        ./locale.nix
     ];
 
     system.stateVersion = "26.05";
