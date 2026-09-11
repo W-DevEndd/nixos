@@ -9,7 +9,16 @@
         enable = true;
         defaultEditor = true;
 
-        colorschemes.catppuccin.enable = true;
-        plugins.lualine.enable = true;
+        # Theme
+        colorschemes.catppuccin = {
+            enable = true;
+
+            settings.flavour = "mocha";
+        };
+
+        # Plugins
+        plugins.lualine = {
+            enable = true;
+        };
     };
 }
