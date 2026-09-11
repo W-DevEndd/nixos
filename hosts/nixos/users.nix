@@ -11,7 +11,7 @@
 
     home-manager = {
         users = {
-            "w-devendd" = import ./home/w-devendd/_user.nix;
+            "w-devendd" = import ./home/w-devendd;
         };
     };
 }

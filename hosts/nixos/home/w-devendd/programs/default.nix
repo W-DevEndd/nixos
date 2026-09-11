@@ -1,6 +1,6 @@
 { config, ... }:
 {
     imports = [
-        ./programs/git.nix
+        ./git.nix
     ];
 }

@@ -6,6 +6,6 @@
     # home.homeDirectory = "/home/w-devendd/";
 
     imports = [
-        ./programs.nix
+        ./programs
     ];
 }

@@ -13,9 +13,11 @@
         };
     };
 
-    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }: {
+    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nixvim, ... } @inputs: {
         nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
+
+            specialArgs = { inherit inputs; };
             modules = [
                 ./hosts/nixos/configuration.nix
                 home-manager.nixosModules.home-manager
@@ -24,6 +26,8 @@
                         useGlobalPkgs = true;
                         useUserPackages = true;
                         backupFileExtension = "bak";
+
+                        extraSpecialArgs = { inherit inputs; };
                     };
                 }
             ];
