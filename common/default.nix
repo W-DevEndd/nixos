@@ -1,6 +1,7 @@
 { pkgs, config, lib, ... }:
 {
     imports = [
+        ./env.nix
         ./packages.nix
         ./services
         ./networking.nix
