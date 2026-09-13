@@ -10,10 +10,9 @@
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     imports = [
-        ../../common/packages.nix
+        ../../common
         ./boot.nix
         ./hardware.nix
-        ./networking.nix
         ./perfomance.nix
         ./users.nix
         ./locale.nix
