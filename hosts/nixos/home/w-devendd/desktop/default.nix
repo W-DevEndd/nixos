@@ -2,6 +2,5 @@
 {
     imports = [
         ./hyprland.nix
-        ./programs/kitty.nix
     ];
 }
