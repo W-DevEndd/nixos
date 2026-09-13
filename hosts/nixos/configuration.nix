@@ -4,11 +4,6 @@
 
 { config, lib, pkgs, ... }:
 {
-    nixpkgs.config = {
-        allowUnfree = true;
-    };
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
     imports = [
         ../../common
         ./boot.nix
@@ -16,6 +11,8 @@
         ./perfomance.nix
         ./users.nix
         ./locale.nix
+        ./services
+        ./nix.nix
     ];
 
     system.stateVersion = "26.05";

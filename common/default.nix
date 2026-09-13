@@ -2,9 +2,10 @@
 {
     imports = [
         ./packages.nix
-        ./service
+        ./services
         ./networking.nix
         ./locale.nix
         ./perfomance.nix
+        ./nix.nix
     ];
 }
