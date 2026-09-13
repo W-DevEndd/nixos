@@ -13,6 +13,7 @@
         ./locale.nix
         ./services
         ./nix.nix
+        ./fonts.nix
     ];
 
     system.stateVersion = "26.05";
