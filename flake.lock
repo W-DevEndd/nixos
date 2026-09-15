@@ -99,7 +99,8 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "w-devendd-dotfiles": "w-devendd-dotfiles"
       }
     },
     "systems": {
@@ -116,6 +117,22 @@
         "owner": "nix-systems",
         "ref": "future-26.11",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "w-devendd-dotfiles": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787672813,
+        "narHash": "sha256-blxdoyXr0gC+yF3oMTTH73FoPnVeza/o7O7S9Yi7BYM=",
+        "owner": "w-devendd",
+        "repo": "dotfiles",
+        "rev": "0ebedda29feb405f0ff2558d50dc5a265d31ba76",
+        "type": "github"
+      },
+      "original": {
+        "owner": "w-devendd",
+        "repo": "dotfiles",
         "type": "github"
       }
     }

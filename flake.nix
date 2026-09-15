@@ -11,6 +11,10 @@
             url = "github:nix-community/home-manager/release-26.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        w-devendd-dotfiles = {
+            url = "github:w-devendd/dotfiles";
+            flake = false;
+        };
     };
 
     outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nixvim, ... } @inputs: {

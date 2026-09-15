@@ -8,5 +8,6 @@
     imports = [
         ./programs
         ./desktop
+        ./dotfiles.nix
     ];
 }
