@@ -18,5 +18,7 @@
         gnumake
 
         unzip
+
+        brightnessctl
     ];
 }

@@ -4,7 +4,7 @@ let
     targetDir = "${config.home.homeDirectory}/.dotfiles";
 in
 {
-    options = {
+    options."w-devendd" = {
         dotfilesRoot = lib.mkOption {
             type = lib.types.str;
             default = targetDir;

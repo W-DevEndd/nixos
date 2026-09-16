@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
 {
-    wayland.windowManager.hyprland.enable = true;
-    wayland.windowManager.hyprland.xwayland.enable = true;
+    xdg.configFile."hypr".source = config.lib.file.mkOutOfStoreSymlink "${config."w-devendd".dotfilesRoot}/hypr";
 
     imports = [
         ../programs/kitty.nix
