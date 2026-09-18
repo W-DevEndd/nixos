@@ -121,7 +121,8 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixvim": "nixvim",
         "quickshell": "quickshell",
-        "w-devendd-dotfiles": "w-devendd-dotfiles"
+        "w-devendd-dotfiles": "w-devendd-dotfiles",
+        "zen-browser": "zen-browser"
       }
     },
     "systems": {
@@ -154,6 +155,29 @@
       "original": {
         "owner": "w-devendd",
         "repo": "dotfiles",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789702344,
+        "narHash": "sha256-DfevaOxGu6NKUF+q5hUAg7kFscWQvuC9Yd/CgR4qpgc=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "ef5fe624be04120db77c08c5df6f75a6a4201517",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

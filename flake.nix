@@ -10,6 +10,7 @@
         # Standalone Repos
         nixvim.url = "github:nix-community/nixvim";
         quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+        zen-browser.url = "github:0xc000022070/zen-browser-flake";
             
 
         # Somethings.....
@@ -22,6 +23,8 @@
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
         nixvim.inputs.nixpkgs.follows = "nixpkgs";
         quickshell.inputs.nixpkgs.follows = "nixpkgs";
+        zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+        zen-browser.inputs.home-manager.follows = "home-manager";
     };
 
     outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nixvim, ... } @inputs: {
