@@ -5,5 +5,6 @@
         ./nixvim.nix
         ./kitty.nix
         ./zen-browser.nix
+        ./gh-cli.nix
     ];
 }
