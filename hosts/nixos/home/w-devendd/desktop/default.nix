@@ -2,7 +2,7 @@
 {
     imports = [
         ./catppuccin.nix
-        ./icons.nix
+        ./gtk.nix
         ./hyprland.nix
         ./qt.nix
     ];
