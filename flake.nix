@@ -11,7 +11,7 @@
         nixvim.url = "github:nix-community/nixvim";
         quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
         zen-browser.url = "github:0xc000022070/zen-browser-flake";
-            
+        catppuccin.url = "github:catppuccin/nix";
 
         # Somethings.....
         w-devendd-dotfiles = {
