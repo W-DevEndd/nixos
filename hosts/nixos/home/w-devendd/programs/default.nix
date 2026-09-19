@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 {
     imports = [
         ./git.nix
@@ -8,5 +8,10 @@
         ./zen-browser.nix
         ./gh-cli.nix
         ./fastfetch.nix
+    ];
+
+    home.packages = with pkgs; [
+        cava btop
+        vesktop obs-studio
     ];
 }
