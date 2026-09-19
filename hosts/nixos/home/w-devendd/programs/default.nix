@@ -2,7 +2,8 @@
 {
     imports = [
         ./git.nix
-        ./nixvim.nix
+        # ./nixvim.nix
+        ./neovim.nix
         ./kitty.nix
         ./zen-browser.nix
         ./gh-cli.nix
