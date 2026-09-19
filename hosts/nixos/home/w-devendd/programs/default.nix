@@ -1,6 +1,7 @@
 { pkgs, config, ... }:
 {
     imports = [
+        ./bash.nix
         ./git.nix
         # ./nixvim.nix
         ./neovim.nix
@@ -11,7 +12,7 @@
     ];
 
     home.packages = with pkgs; [
-        cava btop
+        cava btop tree
         vesktop obs-studio
     ];
 }
