@@ -5,5 +5,6 @@
         ./hyprland.nix
         ./fcitx5.nix
         ./upower.nix
+        ./qt.nix
     ];
 }
