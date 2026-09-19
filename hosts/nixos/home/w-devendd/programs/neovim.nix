@@ -4,6 +4,7 @@
         neovim
         ripgrep fd fzf
         nixd lua-language-server ccls
+        pyright vscode-langservers-extracted
     ];
     xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config."w-devendd".dotfilesRoot}/nvim";
 }
