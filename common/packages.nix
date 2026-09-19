@@ -11,10 +11,6 @@
         htop
         fastfetch
 
-        ripgrep      
-        fd           
-        fzf
-
         gcc          
         gnumake
 

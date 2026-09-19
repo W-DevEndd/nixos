@@ -5,5 +5,5 @@
         platformTheme = "qt5ct";
     };
 
-    environment.systemPackages = [ pkgs.kdePackages.qt6ct ];
+    environment.systemPackages = with pkgs; [ kdePackages.qt6ct kdePackages.qtdeclarative ];
 }
