@@ -4,5 +4,6 @@
         ./catppuccin.nix
         ./icons.nix
         ./hyprland.nix
+        ./qt.nix
     ];
 }
