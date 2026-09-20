@@ -8,10 +8,12 @@
         home-manager.url = "github:nix-community/home-manager/release-26.05";
 
         # Standalone Repos
-        nixvim.url = "github:nix-community/nixvim";
-        quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-        zen-browser.url = "github:0xc000022070/zen-browser-flake";
         catppuccin.url = "github:catppuccin/nix";
+
+        quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+
+        nixvim.url = "github:nix-community/nixvim";
+        zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
         # Somethings.....
         w-devendd-dotfiles = {
@@ -21,8 +23,10 @@
 
         # Follows
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
-        nixvim.inputs.nixpkgs.follows = "nixpkgs";
+
         quickshell.inputs.nixpkgs.follows = "nixpkgs";
+
+        nixvim.inputs.nixpkgs.follows = "nixpkgs";
         zen-browser.inputs.nixpkgs.follows = "nixpkgs";
         zen-browser.inputs.home-manager.follows = "home-manager";
     };
