@@ -5,5 +5,6 @@
         ./gtk.nix
         ./hyprland.nix
         ./qt.nix
+        ./cursor-theme.nix
     ];
 }
