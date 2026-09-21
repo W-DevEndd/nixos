@@ -5,6 +5,9 @@
         nixpkgs.url = "nixpkgs/nixos-26.05";
         nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
+        # Nyxpkgs???
+        chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
         home-manager.url = "github:nix-community/home-manager/release-26.05";
 
         # Standalone Repos
@@ -31,13 +34,13 @@
         zen-browser.inputs.home-manager.follows = "home-manager";
     };
 
-    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nixvim, ... } @inputs: {
-        nixosConfigurations."laptop" = nixpkgs.lib.nixosSystem {
+    outputs = { self, nixpkgs, nixpkgs-unstable, chaotic, home-manager, nixvim, ... } @inputs: {
+        nixosConfigurations."ideapad" = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
-
             specialArgs = { inherit inputs; };
             modules = [
-                ./hosts/laptop/configuration.nix
+                ./hosts/ideapad/configuration.nix
+                chaotic.nixosModules.default
                 home-manager.nixosModules.home-manager
                 {
                     home-manager = {
