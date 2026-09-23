@@ -5,12 +5,10 @@
         nixpkgs.url = "nixpkgs/nixos-26.05";
         nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-        # Nyxpkgs???
-        chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-
         home-manager.url = "github:nix-community/home-manager/release-26.05";
 
         # Standalone Repos
+        nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
         catppuccin.url = "github:catppuccin/nix";
 
         quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
@@ -34,23 +32,21 @@
         zen-browser.inputs.home-manager.follows = "home-manager";
     };
 
-    outputs = { self, nixpkgs, nixpkgs-unstable, chaotic, home-manager, nixvim, ... } @inputs: {
+    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nixvim, nix-cachyos-kernel, ... } @inputs: {
         nixosConfigurations."ideapad" = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
             modules = [
-                ./hosts/ideapad/configuration.nix
-                chaotic.nixosModules.default
+                ({ pkgs, ... }: { nixpkgs.overlays = [nix-cachyos-kernel.overlays.pinned]; })
                 home-manager.nixosModules.home-manager
-                {
-                    home-manager = {
-                        useGlobalPkgs = true;
-                        useUserPackages = true;
-                        backupFileExtension = "bak";
 
-                        extraSpecialArgs = { inherit inputs; };
-                    };
-                }
+                ./hosts/ideapad/configuration.nix
+                { home-manager = {
+                    useGlobalPkgs = true;
+                    useUserPackages = true;
+                    backupFileExtension = "bak";
+                    extraSpecialArgs = { inherit inputs; };
+                }; }
             ];
         };
     };

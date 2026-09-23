@@ -7,6 +7,7 @@
     imports = [
         ../../common
         ./boot.nix
+        ./kernel.nix
         ./hardware.nix
         ./perfomance.nix
         ./users.nix
