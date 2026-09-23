@@ -1,7 +1,7 @@
 { inputs, pkgs, config, lib,... }:
 let
     repo = "https://github.com/w-devendd/dotfiles.git";
-    targetDir = "${config.home.homeDirectory}/.dotfiles";
+    targetDir = "${config.home.homeDirectory}/dotfiles";
 in
 {
     options."w-devendd" = {
