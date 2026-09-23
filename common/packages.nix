@@ -10,6 +10,7 @@
         killall
         htop
         fastfetch
+        peaclock
 
         gcc          
         gnumake
