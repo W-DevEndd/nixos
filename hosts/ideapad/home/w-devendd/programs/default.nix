@@ -1,18 +1,18 @@
 { pkgs, config, ... }:
 {
     imports = [
+        ./desktop-apps
         ./bash.nix
         ./git.nix
+        ./btop.nix
         # ./nixvim.nix
         ./neovim.nix
         ./kitty.nix
-        ./zen-browser.nix
         ./gh-cli.nix
         ./fastfetch.nix
     ];
 
     home.packages = with pkgs; [
-        cava btop tree
-        vesktop obs-studio
+        cava tree
     ];
 }
