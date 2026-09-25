@@ -3,6 +3,7 @@
     imports = [
         ./zen-browser.nix
         ./vesktop.nix
+        ./vscode.nix
     ];
 
     home.packages = with pkgs; [
