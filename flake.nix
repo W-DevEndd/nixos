@@ -6,6 +6,7 @@
         nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
         home-manager.url = "github:nix-community/home-manager/release-26.05";
+        home-manager-unstable.url = "github:nix-community/home-manager";
 
         # Standalone Repos
         nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
@@ -24,12 +25,13 @@
 
         # Follows
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
+        home-manager-unstable.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
-        quickshell.inputs.nixpkgs.follows = "nixpkgs";
+        quickshell.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
-        nixvim.inputs.nixpkgs.follows = "nixpkgs";
-        zen-browser.inputs.nixpkgs.follows = "nixpkgs";
-        zen-browser.inputs.home-manager.follows = "home-manager";
+        nixvim.inputs.nixpkgs.follows = "nixpkgs-unstable";
+        zen-browser.inputs.nixpkgs.follows = "nixpkgs-unstable";
+        zen-browser.inputs.home-manager.follows = "home-manager-unstable";
     };
 
     outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nixvim, nix-cachyos-kernel, ... } @inputs: {
