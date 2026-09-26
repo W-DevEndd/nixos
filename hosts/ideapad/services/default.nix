@@ -6,5 +6,6 @@
         ./fcitx5.nix
         ./upower.nix
         ./qt.nix
+        ./localsend.nix
     ];
 }
