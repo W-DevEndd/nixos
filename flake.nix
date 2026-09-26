@@ -34,13 +34,13 @@
         zen-browser.inputs.home-manager.follows = "home-manager-unstable";
     };
 
-    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nixvim, nix-cachyos-kernel, ... } @inputs: {
-        nixosConfigurations."ideapad" = nixpkgs.lib.nixosSystem {
+    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, home-manager-unstable, nixvim, nix-cachyos-kernel, ... } @inputs: {
+        nixosConfigurations."ideapad" = nixpkgs-unstable.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
             modules = [
                 ({ pkgs, ... }: { nixpkgs.overlays = [nix-cachyos-kernel.overlays.pinned]; })
-                home-manager.nixosModules.home-manager
+                home-manager-unstable.nixosModules.home-manager
 
                 ./hosts/ideapad/configuration.nix
                 { home-manager = {
