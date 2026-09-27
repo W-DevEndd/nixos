@@ -1,6 +1,7 @@
 { ... }:
 {
     imports = [
+        ./flatpak.nix
         ./pipewire.nix
         ./hyprland.nix
         ./fcitx5.nix
