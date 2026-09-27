@@ -7,5 +7,6 @@
         ./upower.nix
         ./qt.nix
         ./localsend.nix
+        ./warp.nix
     ];
 }
