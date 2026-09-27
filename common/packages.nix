@@ -7,7 +7,6 @@
         wget
         curl
 
-        killall
         htop
         fastfetch
         peaclock
