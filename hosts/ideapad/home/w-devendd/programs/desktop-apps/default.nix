@@ -8,7 +8,7 @@
 
     home.packages = with pkgs; [
         # Socal
-        telegram-desktop ytmdesktop
+        telegram-desktop
 
         # Office
         onlyoffice-desktopeditors
