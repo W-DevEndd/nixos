@@ -10,6 +10,8 @@
         htop
         fastfetch
         peaclock
+        ncdu
+        tree
 
         gcc          
         gnumake
