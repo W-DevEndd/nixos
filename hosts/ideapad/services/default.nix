@@ -1,6 +1,7 @@
 { ... }:
 {
     imports = [
+        ./plug-and-play.nix
         ./flatpak.nix
         ./pipewire.nix
         ./hyprland.nix
