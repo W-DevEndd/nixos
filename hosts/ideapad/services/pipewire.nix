@@ -1,4 +1,12 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, config, lib, ... }:
 {
-    services.pipewire.alsa.support32Bit = true;
+    security.rtkit.enable = true;
+
+    services.pipewire = {
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
+        jack.enable = true;
+    };
 }
