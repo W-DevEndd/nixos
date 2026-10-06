@@ -1,9 +1,11 @@
 { pkgs, ... }:
 {
     environment.systemPackages = with pkgs; [
-        git
-        vim
+        gnumake
+        gcc
 
+        vim
+        git
         wget
         curl
 
@@ -13,11 +15,7 @@
         ncdu
         tree
 
-        gcc          
-        gnumake
-
         unzip
-
         brightnessctl
     ];
 }

@@ -4,6 +4,7 @@
         ./zen-browser.nix
         ./vesktop.nix
         ./vscode.nix
+        ./obs-studio.nix
     ];
 
     home.packages = with pkgs; [
@@ -14,17 +15,13 @@
         onlyoffice-desktopeditors
 
         # Media
-        obs-studio
         vlc
         upscaler losslesscut-bin
 
         # Archive
         kdePackages.ark
 
-        # Share and Fetch
-        motrix-next
-
-        # Launcher
-        gearlever
+        # Getter
+        video-downloader
     ];
 }
