@@ -1,6 +1,7 @@
 { ... }:
 {
     imports = [
+        ./waydroid.nix
         ./plug-and-play.nix
         ./flatpak.nix
         ./pipewire.nix
