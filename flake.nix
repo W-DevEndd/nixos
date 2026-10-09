@@ -13,6 +13,7 @@
         catppuccin.url = "github:catppuccin/nix";
 
         quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+        waydroid-script.url = "github:casualsnek/waydroid_script";
 
         nixvim.url = "github:nix-community/nixvim";
         zen-browser.url = "github:0xc000022070/zen-browser-flake";
@@ -32,14 +33,20 @@
         nixvim.inputs.nixpkgs.follows = "nixpkgs-unstable";
         zen-browser.inputs.nixpkgs.follows = "nixpkgs-unstable";
         zen-browser.inputs.home-manager.follows = "home-manager-unstable";
+        waydroid-script.inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, home-manager-unstable, nixvim, nix-cachyos-kernel, ... } @inputs: {
+    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, home-manager-unstable, nixvim, nix-cachyos-kernel, waydroid-script, ... } @inputs: {
         nixosConfigurations."ideapad" = nixpkgs-unstable.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
             modules = [
-                ({ pkgs, ... }: { nixpkgs.overlays = [nix-cachyos-kernel.overlays.pinned]; })
+                ({ pkgs, ... }: { nixpkgs.overlays = [
+                    nix-cachyos-kernel.overlays.pinned
+                    (final: prev: {
+                        waydroid-script = waydroid-script.packages.${pkgs.system}.waydroid_script;
+                    })
+                ]; })
                 home-manager-unstable.nixosModules.home-manager
 
                 ./hosts/ideapad/configuration.nix

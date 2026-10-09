@@ -3,6 +3,6 @@
     virtualisation.waydroid.enable = true;
     environment.systemPackages = with pkgs; [
         lzip
-        waydroid-helper
+        waydroid-script
     ];
 }
