@@ -14,5 +14,6 @@
 
     home.packages = with pkgs; [
         cava tree
+        appimage-run
     ];
 }

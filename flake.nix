@@ -44,7 +44,7 @@
                 ({ pkgs, ... }: { nixpkgs.overlays = [
                     nix-cachyos-kernel.overlays.pinned
                     (final: prev: {
-                        waydroid-script = waydroid-script.packages.${pkgs.system}.waydroid_script;
+                        waydroid-script = waydroid-script.packages.${pkgs.stdenv.hostPlatform.system}.waydroid_script;
                     })
                 ]; })
                 home-manager-unstable.nixosModules.home-manager
