@@ -2,7 +2,7 @@
 {
     xdg.configFile."hypr".source = config.lib.file.mkOutOfStoreSymlink "${config."w-devendd".dotfilesRoot}/hypr";
 
-    home.packages = with pkgs; [kdePackages.dolphin grim satty];
+    home.packages = with pkgs; [kdePackages.dolphin kdePackages.kfind grim satty];
 
     imports = [
         ../programs/kitty.nix

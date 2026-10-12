@@ -15,7 +15,7 @@
         onlyoffice-desktopeditors
 
         # Media
-        vlc
+        vlc qimgv
         upscaler losslesscut-bin
 
         # Archive
