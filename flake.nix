@@ -12,6 +12,7 @@
         nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
         catppuccin.url = "github:catppuccin/nix";
 
+        hyprland.url = "github:hyprwm/Hyprland";
         quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
         waydroid-script.url = "github:casualsnek/waydroid_script";
 
@@ -28,6 +29,7 @@
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
         home-manager-unstable.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
+        hyprland.inputs.nixpkgs.follows = "nixpkgs-unstable";
         quickshell.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
         nixvim.inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -36,7 +38,11 @@
         waydroid-script.inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, home-manager-unstable, nixvim, nix-cachyos-kernel, waydroid-script, ... } @inputs: {
+    outputs = {
+        self, nixpkgs, nixpkgs-unstable, home-manager, home-manager-unstable,
+        hyprland, nixvim, nix-cachyos-kernel, waydroid-script,
+        ...
+    } @inputs: {
         nixosConfigurations."ideapad" = nixpkgs-unstable.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = { inherit inputs; };
