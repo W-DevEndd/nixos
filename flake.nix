@@ -13,6 +13,8 @@
         catppuccin.url = "github:catppuccin/nix";
 
         hyprland.url = "github:hyprwm/Hyprland";
+        hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
+
         quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
         waydroid-script.url = "github:casualsnek/waydroid_script";
 
@@ -30,6 +32,8 @@
         home-manager-unstable.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
         hyprland.inputs.nixpkgs.follows = "nixpkgs-unstable";
+        hyprland-plugins.inputs.hyprland.follows = "hyprland";
+
         quickshell.inputs.nixpkgs.follows = "nixpkgs-unstable";
 
         nixvim.inputs.nixpkgs.follows = "nixpkgs-unstable";
