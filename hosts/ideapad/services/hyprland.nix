@@ -1,4 +1,12 @@
-{ pkgs, lib, config, ... }:
+{ lib, pkgs, inputs, ... }:
+let
+    hypr-plugin-dir = pkgs.symlinkJoin {
+        name = "hyrpland-plugins";
+        paths = [
+            inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.default
+        ];
+    };
+in
 {
     nix.settings = {
         substituters = ["https://hyprland.cachix.org"];
@@ -10,6 +18,10 @@
     programs.hyprland = {
         enable = true;
         xwayland.enable = true;
+
+        package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+        portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
-    environment.etc."hypr/plugins/libhypr-dynamic-cursors.so".source = "${pkgs.hyprlandPlugins.hypr-dynamic-cursors}/lib/libhypr-dynamic-cursors.so";
+
+    environment.sessionVariables = { HYPR_PLUGIN_DIR = hypr-plugin-dir; };
 }
