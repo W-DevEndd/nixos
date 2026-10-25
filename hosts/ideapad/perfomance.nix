@@ -6,7 +6,6 @@
     hardware.graphics = {
         enable = true;
         enable32Bit = true;
-        # extraPackage = with pkgs; [
-        # ];
+        extraPackages = with pkgs; [ mesa ];
     };
 }
