@@ -8,4 +8,5 @@
         "https://hydra.nixos.org/"
         "https://mirrors.tuna.tsinghua.edu.cn/"
     ];
+    programs.nix-ld.enable = true;
 }
