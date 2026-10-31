@@ -17,6 +17,7 @@
         # Media
         vlc qimgv
         upscaler losslesscut-bin
+        liner
 
         # Archive
         kdePackages.ark
