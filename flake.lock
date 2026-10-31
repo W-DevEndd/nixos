@@ -504,6 +504,26 @@
         "type": "github"
       }
     },
+    "liner": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793415399,
+        "narHash": "sha256-OQXIouOJI5KrKNpKZAz9sibSO0wQvQSWXpQpdOey+/I=",
+        "owner": "w-devendd",
+        "repo": "liner-flake",
+        "rev": "c201c8335ee4d5c273a30f623a4a1ad2d174cadf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "w-devendd",
+        "repo": "liner-flake",
+        "type": "github"
+      }
+    },
     "nix-cachyos-kernel": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -670,6 +690,7 @@
         "home-manager-unstable": "home-manager-unstable",
         "hypr-dynamic-cursors": "hypr-dynamic-cursors",
         "hyprland": "hyprland",
+        "liner": "liner",
         "nix-cachyos-kernel": "nix-cachyos-kernel",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-unstable": "nixpkgs-unstable",
