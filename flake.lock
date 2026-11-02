@@ -525,21 +525,38 @@
     "liner": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "liner": "liner_2",
         "nixpkgs": [
           "nixpkgs-unstable"
         ]
       },
       "locked": {
-        "lastModified": 1793495743,
-        "narHash": "sha256-u/9WUgYoyLhGz7gPGJoEltwvbINuzZc6K2olDslKxNw=",
+        "lastModified": 1793596785,
+        "narHash": "sha256-gGAEvh4z4KJyEunfISER9RsLSpgdHlSrjUhR8T9EDho=",
         "owner": "w-devendd",
         "repo": "liner-flake",
-        "rev": "33ff19d9d674f2810fdcd0ec9c810ba73d7b8cc6",
+        "rev": "aba1fcd91632ad88e8614fe6252201d2411f38b9",
         "type": "github"
       },
       "original": {
         "owner": "w-devendd",
         "repo": "liner-flake",
+        "type": "github"
+      }
+    },
+    "liner_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793581971,
+        "narHash": "sha256-v3gK7fxi5sRUMZdYTWSOuH9oePCeLvBrjg3nmxy8KZw=",
+        "owner": "tryliner",
+        "repo": "desktop",
+        "rev": "698ed8f4b3b5544de79451572c4643acbd3b7e86",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tryliner",
+        "repo": "desktop",
         "type": "github"
       }
     },
