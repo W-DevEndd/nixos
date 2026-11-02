@@ -3,9 +3,7 @@
     users.users = {
         "w-devendd" = {
             isNormalUser = true;
-            extraGroups = [
-                "wheel" "networkmanager"
-            ];
+            extraGroups = [ "wheel" "networkmanager" "docker" ];
         };
     };
 
