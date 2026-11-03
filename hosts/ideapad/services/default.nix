@@ -12,5 +12,6 @@
         ./qt.nix
         ./localsend.nix
         ./warp.nix
+        ./fuse.nix
     ];
 }
