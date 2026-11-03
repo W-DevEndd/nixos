@@ -8,16 +8,17 @@
     ];
 
     home.packages = with pkgs; [
-        # Socal
+        # Social
         telegram-desktop
-
-        # Office
-        onlyoffice-desktopeditors
+        zalo
 
         # Media
-        vlc qimgv
-        upscaler losslesscut-bin
         liner
+        vlc qimgv
+
+        # Office && Studio
+        onlyoffice-desktopeditors
+        upscaler losslesscut-bin
 
         # Archive
         kdePackages.ark

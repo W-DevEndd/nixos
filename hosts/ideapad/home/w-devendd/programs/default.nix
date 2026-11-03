@@ -5,11 +5,11 @@
         ./bash.nix
         ./git.nix
         ./btop.nix
+        ./fastfetch.nix
+
         # ./nixvim.nix
         ./neovim.nix
-        ./kitty.nix
         ./gh-cli.nix
-        ./fastfetch.nix
     ];
 
     home.packages = with pkgs; [
