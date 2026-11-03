@@ -9,6 +9,8 @@
 
         # ./nixvim.nix
         ./neovim.nix
+
+        ./rclone.nix
         ./gh-cli.nix
     ];
 
