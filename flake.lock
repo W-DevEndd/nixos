@@ -734,6 +734,7 @@
         "quickshell": "quickshell",
         "w-devendd-dotfiles": "w-devendd-dotfiles",
         "waydroid-script": "waydroid-script",
+        "zalo": "zalo",
         "zen-browser": "zen-browser"
       }
     },
@@ -886,6 +887,26 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "zalo": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793668444,
+        "narHash": "sha256-yWKDASdF5g4IuJklIudzhVKcJtn6p1SpyebFdIIGGa4=",
+        "owner": "VN-Linux-Family",
+        "repo": "zalo-for-linux",
+        "rev": "82bda913c2447545ff85b9dc3d74ae59947eb487",
+        "type": "github"
+      },
+      "original": {
+        "owner": "VN-Linux-Family",
+        "repo": "zalo-for-linux",
         "type": "github"
       }
     },

@@ -21,6 +21,7 @@
         nixvim.url = "github:nix-community/nixvim";
         zen-browser.url = "github:0xc000022070/zen-browser-flake";
         liner.url = "github:w-devendd/liner-flake";
+        zalo.url = "github:VN-Linux-Family/zalo-for-linux";
 
         # Somethings.....
         w-devendd-dotfiles = {
@@ -42,13 +43,14 @@
         zen-browser.inputs.nixpkgs.follows = "nixpkgs-unstable";
         zen-browser.inputs.home-manager.follows = "home-manager-unstable";
         liner.inputs.nixpkgs.follows = "nixpkgs-unstable";
+        zalo.inputs.nixpkgs.follows = "nixpkgs-unstable";
         waydroid-script.inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
     outputs = {
         self, nixpkgs, nixpkgs-unstable, home-manager, home-manager-unstable,
         hyprland, hypr-dynamic-cursors, nixvim, nix-cachyos-kernel, waydroid-script,
-        liner, zen-browser,
+        liner, zen-browser, zalo,
         ...
     } @inputs: {
         nixosConfigurations."ideapad" = nixpkgs-unstable.lib.nixosSystem {
@@ -60,6 +62,7 @@
                     (final: prev: {
                         waydroid-script = waydroid-script.packages.${pkgs.stdenv.hostPlatform.system}.waydroid_script;
                         liner = liner.packages.${pkgs.stdenv.hostPlatform.system}.default;
+                        zalo = zalo.packages.${pkgs.stdenv.hostPlatform.system}.default;
                     })
                 ]; })
                 home-manager-unstable.nixosModules.home-manager
