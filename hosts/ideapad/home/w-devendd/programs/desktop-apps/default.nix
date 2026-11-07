@@ -19,6 +19,7 @@
         # Office && Studio
         onlyoffice-desktopeditors
         upscaler losslesscut-bin
+        krita
 
         # Archive
         kdePackages.ark
