@@ -5,6 +5,7 @@
         ./vesktop.nix
         ./vscode.nix
         ./obs-studio.nix
+        ./lutris.nix
     ];
 
     home.packages = with pkgs; [
