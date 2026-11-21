@@ -6,6 +6,7 @@
         ./vscode.nix
         ./obs-studio.nix
         ./lutris.nix
+        ./twintail.nix
     ];
 
     home.packages = with pkgs; [

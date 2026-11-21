@@ -23,6 +23,8 @@
         liner.url = "github:w-devendd/liner-flake";
         zalo.url = "github:VN-Linux-Family/zalo-for-linux";
 
+        twintaillauncher.url = "github:axioncs/twintaillauncher-flake";
+
         # Somethings.....
         w-devendd-dotfiles = {
             url = "github:w-devendd/dotfiles";
@@ -45,6 +47,8 @@
         liner.inputs.nixpkgs.follows = "nixpkgs-unstable";
         waydroid-script.inputs.nixpkgs.follows = "nixpkgs-unstable";
         zalo.inputs.nixpkgs.follows = "nixpkgs-unstable";
+
+        twintaillauncher.inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
     outputs = {
