@@ -1,7 +1,6 @@
 { ... }:
 {
     imports = [
-        ./aagl.nix
         ./waydroid.nix
         ./docker.nix
         ./plug-and-play.nix
